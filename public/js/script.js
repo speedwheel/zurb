@@ -4,8 +4,7 @@ $( document ).ready(function() {
 
      $(document).on('click', 'a', function(e) {
         let lastActivePopover = $('.js-popover.active');
-        console.log(lastActivePopover)
-        HidePopover(lastActivePopover);
+        DestroyPopover(lastActivePopover);
         lastActivePopover.removeClass('active');
         if($(this).hasClass('next-step')) {
             let currentActivePopup = $(this.hash);
@@ -29,10 +28,10 @@ function InitPopover(selector) {
         html: true,
         placement: 'bottom',
         title : '<span class="text-info">&nbsp;&nbsp;</span>'+
-                '<button type="button" id="close" class="close" onclick="$(&quot;.js-popover.active&quot;).popover(&quot;hide&quot;);">&times;</button>',
+                '<button type="button" id="close" class="close" onclick="DestroyPopover($(&quot;.js-popover.active&quot;));">&times;</button>',
     }).popover('show');
 }
 
-function HidePopover(selector) {
+function DestroyPopover(selector) {
     selector.popover('dispose');
 }
