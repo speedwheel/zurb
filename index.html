@@ -42,11 +42,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h2 class="font-weight-normal">Create jQuery Feature Tours in a Breeze</h2>
+                    <h2 class="h2 font-weight-normal">Create jQuery Feature Tours in a Breeze</h2>
                     <p>Joyride is extremely flexible and lets you take control of how people interact with your tour. We programmed
                         it to be cross-browser compatible with modern browsers and even used some fancy CSS to avoid images.
                         Now let’s see just how easy it is to take your first ride without getting the fuzz involved.</p>
-                    <h2>New in Version 2</h2>
+                    <h2 class="h2 js-popover active" data-content="<div class='mb-2'>Joyride gives you everything you need to call out new features in your app or website.</div><a href='#step2' class='next-step btn btn-primary'>Nex: Steps 2</a>">New in Version 2</h2>
                     <p>There have been many significant performance improvements in Joyride 2, along with a myriad of new features.
                         These features include:</p>
                     <ul>
@@ -76,7 +76,7 @@
                         <li>Same size compressed (~12kb).</li>
                     </ul>
                     <h5 class="text-uppercase font-weight-normal">Step 1</h5>
-                    <h2 class="font-weight-normal">Pack Y       our Bags</h2>
+                    <h2 id="step2" class="font-weight-normal js-popover" data-content="<div class='mb-2'>Joyride gives you everything you need to call out new features in your app or website.</div><a href='#step3' class='next-step btn btn-primary'>Nex: Steps 3</a>">Pack Y our Bags</h2>
                     <p>You’ll definitely need the Joyride kit in order to do this, so make sure you
                         <a href="javascript:void(0)">download it</a>. Just add the following markup to your document
                         <span class="inline-code">&lt;head&gt;</span> and you’ll have everything you need to start your Joyride.</p>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="side-panel">
-                        <h2 class="font-weight-normal">Download</h2>
+                        <h2 id="step3" href="javascript:void(0)" data-content="<div class='mb-2'>Joyride gives you everything you need to call out new features in your app or website.</div><a href='javascript:void(0)' class='next-step btn btn-primary'>Finish</a>" class="font-weight-normal js-popover">Download</h2>
                         <p>The Joyride Kit includes the necessary JS + CSS, but also a demo HTML page that shows off how to
                             hookup your first tour using different options.</p>
                         <a class="button" href="https://github.com/zurb/joyride/archive/master.zip">Download</a>
@@ -133,4 +133,8 @@
     </section>
 </body>
 
+<script src="public/vendor/js/popper.min.js "></script>
+<script src="public/vendor/js/jquery-3.3.1.min.js"></script>
+<script src="public/vendor/js/bootstrap.min.js"></script>
+<script src="public/js/script.js"></script>
 </html>
